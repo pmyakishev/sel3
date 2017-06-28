@@ -47,6 +47,7 @@ public class SearchItems extends BBCommonAPI {
         BBCommonAPI bb = PageFactory.initElements(driver, BBCommonAPI.class);
         bb.refuseMailingList();
         ConnectDB connectDB = new ConnectDB();
+
         connectDB.connectToDBdemo1();
         List<String> list = new ArrayList<String>();
         list = connectDB.readDataBase("items2search", "sku");

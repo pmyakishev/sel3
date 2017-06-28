@@ -2,7 +2,6 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/Amazon/Amazon.iml" filepath="$PROJECT_DIR$/Amazon/Amazon.iml" />
       <module fileurl="file://$PROJECT_DIR$/Bestbuy/Bestbuy.iml" filepath="$PROJECT_DIR$/Bestbuy/Bestbuy.iml" />
       <module fileurl="file://$PROJECT_DIR$/Cigna/Cigna.iml" filepath="$PROJECT_DIR$/Cigna/Cigna.iml" />
       <module fileurl="file://$PROJECT_DIR$/Exercising/Exercising.iml" filepath="$PROJECT_DIR$/Exercising/Exercising.iml" />
