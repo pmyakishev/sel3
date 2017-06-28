@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="Cigna Chrome Browser">
+
+    <parameter name="useCloudEnv" value="false"/>
+    <parameter name="env" value="browserstack"/>
+    <!--<parameter name="userName" value=""/>-->
+    <!--<parameter name="accessKey" value=""/>-->
+    <parameter name="os" value="OS X"/>
+    <parameter name="os_version" value="Sierra"/>
+    <parameter name="resolution" value="1024x768"/>
+    <parameter name="url" value="http://www.cigna.com/"/>
+    <parameter name="browserName" value="chrome"/>
+    <parameter name="browserVersion" value="55.0"/>
+    <parameter name="testName" value="TestCignaApp"/>
+
+    <test name = "Cigna">
+        <classes>
+            <class name="Page.TestGlobalHeader"/>
+        </classes>
+    </test>
+</suite>
