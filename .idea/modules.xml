@@ -3,8 +3,6 @@
   <component name="ProjectModuleManager">
     <modules>
       <module fileurl="file://$PROJECT_DIR$/Bestbuy/Bestbuy.iml" filepath="$PROJECT_DIR$/Bestbuy/Bestbuy.iml" />
-      <module fileurl="file://$PROJECT_DIR$/Cigna/Cigna.iml" filepath="$PROJECT_DIR$/Cigna/Cigna.iml" />
-      <module fileurl="file://$PROJECT_DIR$/Exercising/Exercising.iml" filepath="$PROJECT_DIR$/Exercising/Exercising.iml" />
       <module fileurl="file://$PROJECT_DIR$/Generic/Generic.iml" filepath="$PROJECT_DIR$/Generic/Generic.iml" />
       <module fileurl="file://$PROJECT_DIR$/MyFramework.iml" filepath="$PROJECT_DIR$/MyFramework.iml" />
     </modules>
