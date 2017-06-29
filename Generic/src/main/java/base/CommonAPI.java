@@ -29,8 +29,8 @@ import java.util.concurrent.TimeUnit;
 public class CommonAPI {
     public static WebDriver driver = null;
 
-    public static final String SAUCE_USERNAME = System.getenv("SAUCE_USERNAME");
-    public static final String SAUCE_ACCESS_KEY = System.getenv("SAUCE_ACCESS_KEY");
+    public static final String SAUCE_USERNAME = "myakishev";
+    public static final String SAUCE_ACCESS_KEY = "cb1ffde1-a937-42a8-8a14-0ab0d475054c";
     public static final String BROWSERSTACK_USERNAME = System.getenv("BROWSERSTACK_USERNAME");
     public static final String BROWSERSTACK_ACCESS_KEY = System.getenv("BROWSERSTACK_ACCESS_KEY");
     public static final String MYSQL_URL = System.getenv("MYSQL_URL");
