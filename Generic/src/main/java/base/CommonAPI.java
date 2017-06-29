@@ -31,8 +31,8 @@ public class CommonAPI {
 
     public static final String SAUCE_USERNAME = System.getenv("SAUCE_USERNAME");
     public static final String SAUCE_ACCESS_KEY = System.getenv("SAUCE_ACCESS_KEY");
-    public static final String BROWSERSTACK_USERNAME = "paul13";
-    public static final String BROWSERSTACK_ACCESS_KEY = "wBxgXFYP4tRT84io6t1P";
+    public static final String BROWSERSTACK_USERNAME = System.getenv("BROWSERSTACK_USERNAME");
+    public static final String BROWSERSTACK_ACCESS_KEY = System.getenv("BROWSERSTACK_ACCESS_KEY");
     public static final String MYSQL_URL = System.getenv("MYSQL_URL");
     public static final String MYSQL_USERNAME = System.getenv("MYSQL_USERNAME");
     public static final String MYSQL_PASSWORD = System.getenv("MYSQL_PASSWORD");
