@@ -4,7 +4,7 @@
 <suite name="Tsunami Team">
 
     <parameter name="useCloudEnv" value="true"/>
-    <parameter name="cloudEnv" value="Saucelabs"/>
+    <parameter name="cloudEnv" value="Browserstack"/>
     <parameter name="os" value="OS X"/>
     <parameter name="os_version" value="Sierra"/>
     <parameter name="resolution" value="1024x768"/>
