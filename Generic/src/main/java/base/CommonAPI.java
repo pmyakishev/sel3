@@ -93,7 +93,7 @@ public class CommonAPI {
         }else if(env.equalsIgnoreCase("Browserstack")) {
             cap.setCapability("os_version", os_version);
             cap.setCapability("resolution", resolution);
-            driver = new RemoteWebDriver(new URL("http://" + BROWSERSTACK_USERNAME + ":" + BROWSERSTACK_ACCESS_KEY +
+            driver = new RemoteWebDriver(new URL("https://" + BROWSERSTACK_USERNAME + ":" + BROWSERSTACK_ACCESS_KEY +
                     "@hub.browserstack.com/wd/hub"), cap);
         }
         return driver;
