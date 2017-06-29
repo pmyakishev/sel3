@@ -21,7 +21,7 @@ public class AddToCart extends BBCommonAPI {
     public static WebElement btnAddToCart;
     @FindBy(how = How.CSS, using = ".cart")
     public static WebElement btnGoToCart;
-    @FindBy(how = How.XPATH, using = "html/body/div[3]/div[2]/div/div/div[4]/div/div[1]/div[3]/div/div[1]/div[2]/div[1]/div/div[2]/a")
+    @FindBy(how = How.ID_OR_NAME, using = "checkout")
     public static WebElement btnCheckout;
     @FindBy(how = How.CSS, using = "#location")
     public static WebElement location;
@@ -37,9 +37,9 @@ public class AddToCart extends BBCommonAPI {
         testedItem.click(); sleepFor(1);
         bb.closePopByClose(); sleepFor(2);
         btnAddToCart.click(); sleepFor(3);
-        bb.closePopByCloseIcon();sleepFor(2);
-        btnGoToCart.click(); sleepFor(7);
-        btnCheckout.click(); sleepFor(2);
+        bb.closePopByCloseIcon();sleepFor(3);
+        btnGoToCart.click(); sleepFor(4);
+        btnCheckout.click(); sleepFor(3);
         return new AddToCart();
     }
     public void provideLocation() throws InterruptedException {
