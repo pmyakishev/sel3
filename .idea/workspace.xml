@@ -3,7 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="515fdf2c-394d-42af-9ec7-fd692a4d8ffc" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Bestbuy/src/test/resources/BestbuyRunner.xml" afterPath="$PROJECT_DIR$/Bestbuy/src/test/resources/BestbuyRunner.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Generic/src/main/java/base/CommonAPI.java" afterPath="$PROJECT_DIR$/Generic/src/main/java/base/CommonAPI.java" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/target/" />
@@ -33,11 +33,11 @@
   <component name="ExecutionTargetManager" SELECTED_TARGET="default_target" />
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="BestbuyRunner.xml" pinned="false" current-in-tab="true">
+      <file leaf-file-name="BestbuyRunner.xml" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Bestbuy/src/test/resources/BestbuyRunner.xml">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="90">
-              <caret line="6" column="50" lean-forward="false" selection-start-line="6" selection-start-column="50" selection-end-line="6" selection-end-column="50" />
+            <state relative-caret-position="60">
+              <caret line="4" column="0" lean-forward="true" selection-start-line="4" selection-start-column="0" selection-end-line="4" selection-end-column="0" />
               <folding>
                 <marker date="1498748063000" expanded="true" signature="954:1399" ph="..." />
               </folding>
@@ -45,18 +45,18 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="CommonAPI.java" pinned="false" current-in-tab="false">
+      <file leaf-file-name="CommonAPI.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/Generic/src/main/java/base/CommonAPI.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="485">
-              <caret line="92" column="51" lean-forward="false" selection-start-line="92" selection-start-column="39" selection-end-line="92" selection-end-column="51" />
+            <state relative-caret-position="1155">
+              <caret line="101" column="16" lean-forward="true" selection-start-line="101" selection-start-column="16" selection-end-line="101" selection-end-column="16" />
               <folding>
-                <element signature="e#5952#5964#0" expanded="true" />
-                <element signature="e#6161#6173#0" expanded="true" />
-                <element signature="e#6218#6226#0" expanded="true" />
-                <element signature="e#6527#6539#0" expanded="true" />
-                <element signature="e#6751#6763#0" expanded="true" />
-                <element signature="e#7779#7787#0" expanded="true" />
+                <element signature="e#5947#5959#0" expanded="true" />
+                <element signature="e#6156#6168#0" expanded="true" />
+                <element signature="e#6213#6221#0" expanded="true" />
+                <element signature="e#6522#6534#0" expanded="true" />
+                <element signature="e#6746#6758#0" expanded="true" />
+                <element signature="e#7774#7782#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -154,8 +154,8 @@
         <option value="$PROJECT_DIR$/Bestbuy/src/main/java/ui/AddToCart.java" />
         <option value="$PROJECT_DIR$/Bestbuy/src/main/java/ui/SearchItems.java" />
         <option value="$PROJECT_DIR$/pom.xml" />
-        <option value="$PROJECT_DIR$/Generic/src/main/java/base/CommonAPI.java" />
         <option value="$PROJECT_DIR$/Bestbuy/src/test/resources/BestbuyRunner.xml" />
+        <option value="$PROJECT_DIR$/Generic/src/main/java/base/CommonAPI.java" />
       </list>
     </option>
   </component>
@@ -258,8 +258,8 @@
     </treeState>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="-1886" />
-    <option name="y" value="23" />
+    <option name="x" value="57" />
+    <option name="y" value="65" />
     <option name="width" value="1881" />
     <option name="height" value="1047" />
   </component>
@@ -292,6 +292,20 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="sel3" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="sel3" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="sel3" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Generic" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -1047,7 +1061,14 @@
       <option name="project" value="LOCAL" />
       <updated>1498704587669</updated>
     </task>
-    <option name="localTasksCounter" value="33" />
+    <task id="LOCAL-00033" summary="changed to soucelabs">
+      <created>1498748076150</created>
+      <option name="number" value="00033" />
+      <option name="presentableId" value="LOCAL-00033" />
+      <option name="project" value="LOCAL" />
+      <updated>1498748076150</updated>
+    </task>
+    <option name="localTasksCounter" value="34" />
     <servers />
   </component>
   <component name="TestHistory">
@@ -1083,7 +1104,7 @@
     </history-entry>
   </component>
   <component name="ToolWindowManager">
-    <frame x="-1886" y="23" width="1881" height="1047" extended-state="6" />
+    <frame x="57" y="65" width="1881" height="1047" extended-state="0" />
     <editor active="true" />
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
@@ -1470,27 +1491,27 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Generic/src/main/java/base/CommonAPI.java">
+    <entry file="file://$PROJECT_DIR$/Bestbuy/src/test/resources/BestbuyRunner.xml">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="485">
-          <caret line="92" column="51" lean-forward="false" selection-start-line="92" selection-start-column="39" selection-end-line="92" selection-end-column="51" />
+        <state relative-caret-position="60">
+          <caret line="4" column="0" lean-forward="true" selection-start-line="4" selection-start-column="0" selection-end-line="4" selection-end-column="0" />
           <folding>
-            <element signature="e#5952#5964#0" expanded="true" />
-            <element signature="e#6161#6173#0" expanded="true" />
-            <element signature="e#6218#6226#0" expanded="true" />
-            <element signature="e#6527#6539#0" expanded="true" />
-            <element signature="e#6751#6763#0" expanded="true" />
-            <element signature="e#7779#7787#0" expanded="true" />
+            <marker date="1498748063000" expanded="true" signature="954:1399" ph="..." />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Bestbuy/src/test/resources/BestbuyRunner.xml">
+    <entry file="file://$PROJECT_DIR$/Generic/src/main/java/base/CommonAPI.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="90">
-          <caret line="6" column="50" lean-forward="false" selection-start-line="6" selection-start-column="50" selection-end-line="6" selection-end-column="50" />
+        <state relative-caret-position="1155">
+          <caret line="101" column="16" lean-forward="true" selection-start-line="101" selection-start-column="16" selection-end-line="101" selection-end-column="16" />
           <folding>
-            <marker date="1498748063000" expanded="true" signature="954:1399" ph="..." />
+            <element signature="e#5947#5959#0" expanded="true" />
+            <element signature="e#6156#6168#0" expanded="true" />
+            <element signature="e#6213#6221#0" expanded="true" />
+            <element signature="e#6522#6534#0" expanded="true" />
+            <element signature="e#6746#6758#0" expanded="true" />
+            <element signature="e#7774#7782#0" expanded="true" />
           </folding>
         </state>
       </provider>
