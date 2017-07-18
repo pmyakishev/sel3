@@ -20,18 +20,16 @@ public class TestAddToCart extends AddToCart {
         AddToCart add = PageFactory.initElements(driver, AddToCart.class);
         BBCommonAPI bb = PageFactory.initElements(driver, BBCommonAPI.class);
 
-        ConfirmStore store =PageFactory.initElements(driver, ConfirmStore.class);
-        WhenYouWantOrder phone =PageFactory.initElements(driver, WhenYouWantOrder.class);
-        PaymentVerification pay =PageFactory.initElements(driver, PaymentVerification.class);
+        ConfirmStore store = PageFactory.initElements(driver, ConfirmStore.class);
+        WhenYouWantOrder phone = PageFactory.initElements(driver, WhenYouWantOrder.class);
+        PaymentVerification pay = PageFactory.initElements(driver, PaymentVerification.class);
 
         add.getAddToCart();
-
         takeScreenShot("cart");
         //login
         bb.secureLogin();sleepFor(4);
-
         //confirm store
-        store.confirmStore(); sleepFor(2);
+//        store.confirmStore(); sleepFor(2);
 
         //provide a phone #
         phone.confirmPhone();

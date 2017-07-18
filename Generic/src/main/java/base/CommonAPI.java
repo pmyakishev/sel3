@@ -51,9 +51,10 @@ public class CommonAPI {
             //run in local
             getLocalDriver(os, browserName);
         }
-        driver.manage().timeouts().implicitlyWait(3, TimeUnit.SECONDS);
+        driver.manage().timeouts().implicitlyWait(2, TimeUnit.SECONDS);
         driver.get(url);
         driver.manage().window().maximize();
+        driver.manage().timeouts().implicitlyWait(2, TimeUnit.SECONDS);
     }
     public WebDriver getLocalDriver(String OS, String browserName) {
         if (browserName.equalsIgnoreCase("chrome")) {
@@ -261,9 +262,9 @@ public class CommonAPI {
     public void takeScreenShot(String testName) throws IOException {
         File file = ((TakesScreenshot) driver).getScreenshotAs(OutputType.FILE);
         DateFormat df = new SimpleDateFormat("ddMMyy-HHmmss");
-        Date dateobj = new Date();
-        df.format(dateobj);
-        String fileName = "Screenshots/" +testName +df.format(dateobj)+".png";
+        Date dateObj = new Date();
+        df.format(dateObj);
+        String fileName = "Screenshots/" +testName +df.format(dateObj)+".png";
         FileUtils.copyFile(file, new File(fileName));
     }
     //Synchronization

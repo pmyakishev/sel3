@@ -9,7 +9,6 @@ import org.openqa.selenium.support.PageFactory;
 import java.util.ArrayList;
 import java.util.List;
 
-
 /**
  * Created by admin on 1/28/17.
  */
@@ -27,6 +26,7 @@ public class GlobalHeader extends BBCommonAPI{
 
     public void dropDownMenu() throws InterruptedException{
         BBCommonAPI bb = PageFactory.initElements(driver,BBCommonAPI.class);
+
         bb.refuseMailingList();
         productsMenu.click(); sleepFor(1);
         brandsMenu.click(); sleepFor(1);

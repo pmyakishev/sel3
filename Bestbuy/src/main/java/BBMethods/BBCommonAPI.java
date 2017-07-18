@@ -15,8 +15,8 @@ public class BBCommonAPI extends CommonAPI {
     public static final String username = System.getenv("BESTBUY_USERNAME");
     public static final String password = System.getenv("BESTBUY_PASSWORD");
 
-    @FindBy(how = How.CSS, using = ".close")
-    public static WebElement closeMailingList;
+//    @FindBy(how = How.CSS, using = ".close")
+//    public static WebElement closeMailingList;
     @FindBy(how = How.CSS, using = "#profileMenuWrap1")
     public static WebElement signInMenuBtn;
     @FindBy(how = How.CSS, using = ".action-btn")
@@ -32,6 +32,11 @@ public class BBCommonAPI extends CommonAPI {
     @FindBy(how = How.CSS, using = ".cia-form__submit-button.js-submit-button")
     public static WebElement submitCredentials;
 
+    public void refuseMailingList() {
+        WebDriverWait wait = new WebDriverWait(driver, 3);
+        WebElement closeButton = wait.until(ExpectedConditions.elementToBeClickable(By.cssSelector(".email-submission-modal .modal-header button.close")));
+        closeButton.click();
+    }
     public void successfulLogIn() throws InterruptedException {
         sleepFor(2);
         signInMenuBtn.click();
@@ -41,7 +46,6 @@ public class BBCommonAPI extends CommonAPI {
         submitCredentials.click();
         sleepFor(1);
     }
-
     public BBCommonAPI secureLogin() throws InterruptedException {
         enterEmailField.sendKeys(username);
         enterPasswordField.sendKeys(password);
@@ -49,23 +53,21 @@ public class BBCommonAPI extends CommonAPI {
         sleepFor(3);
         return new BBCommonAPI();
     }
-
     public boolean isElementPresent(WebElement webElement) {
-        try {if (webElement.isDisplayed()) {
-                return true;}
-            else {return false;}
-        } catch (Exception ex) {return false;}
+        try {
+            if (webElement.isDisplayed()) {
+                return true;
+            } else {
+                return false;
+            }
+        } catch (Exception ex) {
+            return false;
+        }
     }
-
     public void clickIfElementPresent(WebElement webElement) {
         if (isElementPresent(webElement)){
             webElement.click();
         }
-    }
-    public void refuseMailingList() {
-        WebDriverWait wait = new WebDriverWait(driver, 3);
-        WebElement closeButton = wait.until(ExpectedConditions.elementToBeClickable(By.cssSelector(".email-submission-modal .modal-header button.close")));
-        closeButton.click();
     }
     public void closePopByCloseIcon() throws InterruptedException {
         clickIfElementPresent(closePopByCloseIcon);
@@ -73,7 +75,7 @@ public class BBCommonAPI extends CommonAPI {
     public void closePopByClose() throws InterruptedException {
         clickIfElementPresent(closePopByClose);
     }
-    }
+}
 //    public void refuseMailingList() {
 //        if (closeMailingList.isDisplayed()) {
 //            closeMailingList.click();

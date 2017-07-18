@@ -20,11 +20,11 @@ public class DropDownDeals extends BBCommonAPI {
     @FindBy(how= How.XPATH,using=".//*[@id='header']/div[2]/div/nav[2]/ul/li[4]/a")
     public  WebElement GiftIdeasRegistry;
 
-    public void dropDownDeals()throws InterruptedException{
-        sleepFor(1);
-        BBCommonAPI bb = PageFactory.initElements(driver,BBCommonAPI.class);
-        sleepFor(5);
+    public void dropDownDeals() throws InterruptedException{
+        BBCommonAPI bb = PageFactory.initElements(driver, BBCommonAPI.class);
+        sleepFor(2);
         bb.refuseMailingList();
+
         weeklyAd.click(); sleepFor(2);
         dayOfTheDay.click(); sleepFor(2);
         GiftCards.click(); sleepFor(2);

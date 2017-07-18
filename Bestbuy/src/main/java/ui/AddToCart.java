@@ -33,12 +33,13 @@ public class AddToCart extends BBCommonAPI {
         BBCommonAPI bb = PageFactory.initElements(driver, BBCommonAPI.class);
         sleepFor(2);
         bb.refuseMailingList();
+
         searchBar.sendKeys("5709670", Keys.ENTER); sleepFor(1);
         testedItem.click(); sleepFor(1);
         bb.closePopByClose(); sleepFor(2);
         btnAddToCart.click(); sleepFor(3);
         bb.closePopByCloseIcon();sleepFor(3);
-        btnGoToCart.click(); sleepFor(4);
+        btnGoToCart.click(); sleepFor(6);
         btnCheckout.click(); sleepFor(3);
         return new AddToCart();
     }

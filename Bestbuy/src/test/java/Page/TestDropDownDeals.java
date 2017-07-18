@@ -14,6 +14,7 @@ public class TestDropDownDeals extends DropDownDeals{
     public void DropDownDeals() throws InterruptedException, IOException {
         DropDownDeals ddd = PageFactory.initElements(driver, DropDownDeals.class);
         ddd.dropDownDeals();
+
         takeScreenShot("TestDropDownDeals");
     }
 }
