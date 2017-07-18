@@ -3,7 +3,7 @@
 
 <suite name="Tsunami Team">
 
-    <parameter name="useCloudEnv" value="false"/>
+    <parameter name="useCloudEnv" value="true"/>
     <parameter name="cloudEnv" value="Browserstack"/>
     <!--<parameter name="cloudEnv" value="Saucelabs"/>-->
     <parameter name="os" value="OS X"/>
