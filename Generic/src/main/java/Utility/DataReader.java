@@ -63,19 +63,21 @@ public class DataReader {
 
     public String getCellValue(HSSFCell cell){
         Object value = null;
-        int dataType = cell.getCellType();
-        switch(dataType){
-            case HSSFCell.CELL_TYPE_NUMERIC:
+        switch(cell.getCellType()){
+            case NUMERIC:
                 value = cell.getNumericCellValue();
                 break;
-            case HSSFCell.CELL_TYPE_STRING:
+            case STRING:
                 value = cell.getStringCellValue();
                 break;
-            case HSSFCell.CELL_TYPE_BOOLEAN:
+            case BOOLEAN:
                 value = cell.getBooleanCellValue();
                 break;
+            default:
+                value = "";
+                break;
         }
-        return value.toString();
+        return value != null ? value.toString() : "";
     }
     public void writeBack(String value)throws IOException{
         wb = new HSSFWorkbook();
