@@ -33,7 +33,7 @@ public class BBCommonAPI extends CommonAPI {
     public static WebElement submitCredentials;
 
     public void refuseMailingList() {
-        WebDriverWait wait = new WebDriverWait(driver, 3);
+        WebDriverWait wait = new WebDriverWait(driver, java.time.Duration.ofSeconds(3));
         WebElement closeButton = wait.until(ExpectedConditions.elementToBeClickable(By.cssSelector(".email-submission-modal .modal-header button.close")));
         closeButton.click();
     }
