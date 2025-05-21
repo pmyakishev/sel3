@@ -1,7 +1,8 @@
 package dataToSearch;
 
-import Utility.DataReader;
 import java.io.IOException;
+
+import utility.DataReader;
 
 /**
  * Created by admin on 1/26/17.

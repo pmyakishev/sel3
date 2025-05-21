@@ -1,8 +1,9 @@
 package ui;
 
 import BBMethods.BBCommonAPI;
-import Utility.ConnectDB;
 import dataToSearch.DataToSearch;
+import utility.ConnectDB;
+
 import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;

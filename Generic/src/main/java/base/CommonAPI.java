@@ -58,6 +58,9 @@ public class CommonAPI {
     }
     public WebDriver getLocalDriver(String OS, String browserName) {
         if (browserName.equalsIgnoreCase("chrome")) {
+            System.out.println("               ######### Current working directory here");
+            String currentDir = System.getProperty("user.dir");
+            System.out.println("                 ######### Current working directory: " + currentDir);
             if (OS.equalsIgnoreCase("OS X")) {
                 System.setProperty("webdriver.chrome.driver", "../Generic/Driver/chromedriver");
             } else if (OS.equalsIgnoreCase("Win")) {

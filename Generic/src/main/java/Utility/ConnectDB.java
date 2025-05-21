@@ -1,4 +1,4 @@
-package Utility;
+package utility;
 
 import com.mongodb.MongoClient;
 import com.mongodb.MongoClientURI;
