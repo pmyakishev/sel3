@@ -8,6 +8,7 @@ import org.openqa.selenium.ie.InternetExplorerDriver;
 import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.remote.DesiredCapabilities;
 import org.openqa.selenium.remote.RemoteWebDriver;
+import org.openqa.selenium.support.ui.ExpectedCondition;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.Select;
 import org.openqa.selenium.support.ui.WebDriverWait;
@@ -270,7 +271,7 @@ public class CommonAPI {
     }
 
     //Taking Screen shots
-    public void takeScreenShot(String testName) throws IOException {
+    public static void takeScreenShot(String testName) throws IOException {
         File file = ((TakesScreenshot) driver).getScreenshotAs(OutputType.FILE);
         DateFormat df = new SimpleDateFormat("ddMMyy-HHmmss");
         Date dateObj = new Date();
@@ -287,10 +288,26 @@ public class CommonAPI {
         WebDriverWait wait = new WebDriverWait(driver, java.time.Duration.ofSeconds(10));
         return wait.until(ExpectedConditions.visibilityOfElementLocated(locator));
     }
+
+    public static WebElement waitUntilElementVisible(WebElement element) {
+        WebDriverWait wait = new WebDriverWait(driver, java.time.Duration.ofSeconds(15));
+        return wait.until(ExpectedConditions.visibilityOf(element));
+    }   
+
     public static Boolean waitUntilSelectable(By locator) {
-        WebDriverWait wait = new WebDriverWait(driver, java.time.Duration.ofSeconds(10));
+        WebDriverWait wait = new WebDriverWait(driver, java.time.Duration.ofSeconds(15));
         return wait.until(ExpectedConditions.elementToBeSelected(locator));
     }
+    public static Boolean waitUntilElementSelectable(WebElement element) {
+        WebDriverWait wait = new WebDriverWait(driver, java.time.Duration.ofSeconds(15));
+        return wait.until(ExpectedConditions.elementToBeSelected(element));
+    }
+      
+    public static WebElement waitUntilElementClickable(WebElement element) {
+        WebDriverWait wait = new WebDriverWait(driver, java.time.Duration.ofSeconds(15));
+        return wait.until(ExpectedConditions.elementToBeClickable(element));
+    }
+
     public void upLoadFile(String locator, String path) {
         driver.findElement(By.cssSelector(locator)).sendKeys(path);
 

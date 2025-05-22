@@ -31,6 +31,12 @@ public class BBCommonAPI extends CommonAPI {
     public static WebElement enterPasswordField;
     @FindBy(how = How.CSS, using = ".cia-form__submit-button.js-submit-button")
     public static WebElement submitCredentials;
+    @FindBy(how = How.CSS, using = "button[data-track*='Sign In - Continue']")
+    public static WebElement continueBtn;
+    @FindBy(how = How.CSS, using = "button[type*='submit']")
+    public static WebElement continueBtn2;
+    @FindBy(how = How.CSS, using = "#password-radio")
+    public static WebElement usePassRadio;
 
     public void refuseMailingList() {
         WebDriverWait wait = new WebDriverWait(driver, java.time.Duration.ofSeconds(3));
@@ -47,9 +53,13 @@ public class BBCommonAPI extends CommonAPI {
         sleepFor(1);
     }
     public BBCommonAPI secureLogin() throws InterruptedException {
+        System.out.println("$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$BESTBUY_USERNAME: "+System.getenv("BESTBUY_USERNAME"));
         enterEmailField.sendKeys(username);
+        continueBtn.click();
+        usePassRadio.click();
         enterPasswordField.sendKeys(password);
-        submitCredentials.click();
+        waitUntilElementClickable(continueBtn2);
+        continueBtn2.click();
         sleepFor(3);
         return new BBCommonAPI();
     }
