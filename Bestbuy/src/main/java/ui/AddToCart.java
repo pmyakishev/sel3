@@ -1,6 +1,7 @@
 package ui;
 
 import BBMethods.BBCommonAPI;
+import org.openqa.selenium.By;
 import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
@@ -13,11 +14,11 @@ import org.openqa.selenium.support.PageFactory;
 public class AddToCart extends BBCommonAPI {
     public static final String zipCode = System.getenv("ZIP_CODE");
 
-    @FindBy(how = How.CSS, using = "#gh-search-input")
+    @FindBy(how = How.CSS, using = "#gh-search-input") 
     public static WebElement searchBar;
-    @FindBy(how = How.CSS, using = ".sku-title>h4>a")
+    @FindBy(how = How.CLASS_NAME, using = "product-title")
     public static WebElement testedItem;
-    @FindBy(how = How.CSS, using = ".cart-button")
+    @FindBy(how = How.CSS, using = ".add-to-cart")
     public static WebElement btnAddToCart;
     @FindBy(how = How.CSS, using = ".cart")
     public static WebElement btnGoToCart;
@@ -27,14 +28,17 @@ public class AddToCart extends BBCommonAPI {
     public static WebElement location;
     @FindBy(how = How.CSS, using = ".apply-location")
     public static WebElement checkAvailabilityGo;
+    @FindBy(how = How.CLASS_NAME, using = "header-search-button")
+    public static WebElement headerSearchButton;
 
 
     public AddToCart getAddToCart() throws InterruptedException {
         BBCommonAPI bb = PageFactory.initElements(driver, BBCommonAPI.class);
         sleepFor(2);
-        bb.refuseMailingList();
-
-        searchBar.sendKeys("5709670", Keys.ENTER); sleepFor(1);
+        // bb.refuseMailingList();
+        searchBar.sendKeys("6612253");
+        headerSearchButton.click();
+        waitUntilVisible(By.className("product-title"));
         testedItem.click(); sleepFor(1);
         bb.closePopByClose(); sleepFor(2);
         btnAddToCart.click(); sleepFor(3);

@@ -15,6 +15,7 @@ import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Optional;
 import org.testng.annotations.Parameters;
+import org.testng.annotations.AfterSuite;
 
 import java.io.File;
 import java.io.IOException;
@@ -25,10 +26,12 @@ import java.util.ArrayList;
 import java.util.Date;
 import java.util.List;
 import java.util.concurrent.TimeUnit;
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
 
 public class CommonAPI {
     public static WebDriver driver = null;
-
+    private static final Logger log = LogManager.getLogger(CommonAPI.class);
     public static final String SAUCE_USERNAME = "myakishev";
     public static final String SAUCE_ACCESS_KEY = "cb1ffde1-a937-42a8-8a14-0ab0d475054c";
     public static final String BROWSERSTACK_USERNAME = System.getenv("BROWSERSTACK_USER");
@@ -101,6 +104,11 @@ public class CommonAPI {
                     "@hub.browserstack.com/wd/hub"), cap);
         }
         return driver;
+    }
+    @AfterSuite
+    public void teardown() {
+        log.info("Closing browser");
+        driver.quit();
     }
 
     @AfterMethod
@@ -271,17 +279,17 @@ public class CommonAPI {
         FileUtils.copyFile(file, new File(fileName));
     }
     //Synchronization
-    public void waitUntilClickAble(By locator) {
+    public static WebElement waitUntilClickAble(By locator) {
         WebDriverWait wait = new WebDriverWait(driver, java.time.Duration.ofSeconds(10));
-        WebElement element = wait.until(ExpectedConditions.elementToBeClickable(locator));
+        return wait.until(ExpectedConditions.elementToBeClickable(locator));
     }
-    public void waitUntilVisible(By locator) {
+    public static WebElement waitUntilVisible(By locator) {
         WebDriverWait wait = new WebDriverWait(driver, java.time.Duration.ofSeconds(10));
-        WebElement element = wait.until(ExpectedConditions.visibilityOfElementLocated(locator));
+        return wait.until(ExpectedConditions.visibilityOfElementLocated(locator));
     }
-    public void waitUntilSelectable(By locator) {
+    public static Boolean waitUntilSelectable(By locator) {
         WebDriverWait wait = new WebDriverWait(driver, java.time.Duration.ofSeconds(10));
-        boolean element = wait.until(ExpectedConditions.elementToBeSelected(locator));
+        return wait.until(ExpectedConditions.elementToBeSelected(locator));
     }
     public void upLoadFile(String locator, String path) {
         driver.findElement(By.cssSelector(locator)).sendKeys(path);

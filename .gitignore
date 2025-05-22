@@ -3,3 +3,4 @@
 .settings/
 target/
 .vscode
+.DS_Store/
