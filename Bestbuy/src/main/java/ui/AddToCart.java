@@ -34,12 +34,14 @@ public class AddToCart extends BBCommonAPI {
     public AddToCart getAddToCart() throws InterruptedException {
         BBCommonAPI bb = PageFactory.initElements(driver, BBCommonAPI.class);
         // bb.refuseMailingList();
+        waitUntilElementVisible(searchBar);
         searchBar.sendKeys("6612253");
-        sleepFor(2);
+        sleepFor(1);
         waitUntilElementClickable(headerSearchButton);
         headerSearchButton.click();
         waitUntilVisible(By.className("product-title"));
         testedItem.click();
+        sleepFor(1);
         bb.closePopByClose();
         waitUntilElementClickable(btnAddToCart);
         btnAddToCart.click();

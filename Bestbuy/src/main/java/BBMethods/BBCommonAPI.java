@@ -54,9 +54,11 @@ public class BBCommonAPI extends CommonAPI {
     }
     public BBCommonAPI secureLogin() throws InterruptedException {
         System.out.println("$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$BESTBUY_USERNAME: "+System.getenv("BESTBUY_USERNAME"));
+        waitUntilElementVisible(enterEmailField);
         enterEmailField.sendKeys(username);
         continueBtn.click();
         usePassRadio.click();
+        waitUntilElementVisible(enterPasswordField);
         enterPasswordField.sendKeys(password);
         sleepFor(1);
         waitUntilElementClickable(continueBtn2);
