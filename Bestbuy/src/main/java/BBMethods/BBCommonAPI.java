@@ -58,9 +58,10 @@ public class BBCommonAPI extends CommonAPI {
         continueBtn.click();
         usePassRadio.click();
         enterPasswordField.sendKeys(password);
+        sleepFor(1);
         waitUntilElementClickable(continueBtn2);
         continueBtn2.click();
-        sleepFor(3);
+        sleepFor(2);
         return new BBCommonAPI();
     }
     public boolean isElementPresent(WebElement webElement) {

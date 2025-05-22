@@ -35,6 +35,7 @@ public class AddToCart extends BBCommonAPI {
         BBCommonAPI bb = PageFactory.initElements(driver, BBCommonAPI.class);
         // bb.refuseMailingList();
         searchBar.sendKeys("6612253");
+        sleepFor(2);
         waitUntilElementClickable(headerSearchButton);
         headerSearchButton.click();
         waitUntilVisible(By.className("product-title"));
